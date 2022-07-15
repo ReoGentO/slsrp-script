@@ -1,7 +1,7 @@
 script_name('AdminMode')
 script_author('Fox_Yotanhaim')
 script_description('Универсальный скрипт для админов сервера SLS RP')
-script_version("14.07.2022")
+script_version("15.07.2022")
 
 
 
@@ -3096,6 +3096,8 @@ function main()
 	if autoupdate_loaded and enable_autoupdate and Update then
         pcall(Update.check, Update.json_url, Update.prefix, Update.url)
     end
+	
+	sampAddChatMessage("Автообновление работает", -1)
 	
 	while true do
 		wait(0)
